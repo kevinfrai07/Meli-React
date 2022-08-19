@@ -15,7 +15,7 @@ function Items() {
         const getProducts = async () => {
             const data = await getSearchProduct(search);
             const results = data.results;
-            const filters = data.filters;
+            const filters = data.filters.length > 0 ? data.filters : null;
             setCategories(filters);
             if (results.length > 0) {
                 setProducts(results);

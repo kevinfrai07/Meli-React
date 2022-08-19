@@ -15,13 +15,16 @@ function Home() {
         e.preventDefault();
         navigate('/items/' + buscar);
     }
+    const handleOnClick = (e) => {
+        navigate('/');
+    }
     return(
         <Fragment>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
                     <div className="col-1"></div>
                     <div className="col-1">
-                        <img src={logo} alt=""/>
+                        <img src={logo} alt="" onClick={handleOnClick}/>
                     </div>
                     <div className="col-9">
                         <form onSubmit={handleSubmit}>

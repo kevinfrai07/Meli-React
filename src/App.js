@@ -12,6 +12,7 @@ function App() {
     <Fragment>
       <Router>
         <Routes>
+          <Route exact path="*" element={<Home/>}/>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/items/:search" element={<Items/>}/>
           <Route exact path="/item/:id" element={<Item/>}/>

@@ -6,11 +6,11 @@ function Breadcrumb({ categories }) {
             <span >
                 <span >
                     {
-                        categories == null ? "" :
+                        categories === null ? "" :
 
                             (Array.isArray(categories)
                                 ?
-                                    categories.map(category =>
+                                    categories[0].values[0].path_from_root.map(category =>
                                         <li key={category.id}>
                                             {category.name}
                                         </li>
